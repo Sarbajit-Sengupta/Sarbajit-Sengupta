@@ -13,9 +13,12 @@ activity = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(activity)
 
 
-def calendar():
+def calendar(pad_to_sunday=False):
     end = dt.datetime.now(dt.timezone.utc).date()
-    dates = [end - dt.timedelta(days=i) for i in range(364, -1, -1)]
+    start = end - dt.timedelta(days=364)
+    if pad_to_sunday:
+        start -= dt.timedelta(days=(start.weekday() + 1) % 7)
+    dates = [start + dt.timedelta(days=i) for i in range((end - start).days + 1)]
     weeks = []
     for day in dates:
         if not weeks or day.weekday() == 6:
@@ -30,6 +33,7 @@ class CalendarTests(unittest.TestCase):
         svg = activity.render(calendar())
         root = ET.fromstring(svg)
         self.assertEqual(len(root.findall('.//{http://www.w3.org/2000/svg}rect')) - 6, 365)
+        ET.fromstring(activity.render(calendar(pad_to_sunday=True)))
 
     def test_error_and_missing_day_are_rejected(self):
         with self.assertRaises(ValueError):
