@@ -38,7 +38,7 @@ def render(payload):
             row = (date.weekday() + 1) % 7
             cells.append(f'<rect x="{48 + col * 20}" y="{83 + row * 20}" width="14" height="14" rx="2" fill="{COLORS[level]}"><title>{date.isoformat()}: {count} contributions</title></rect>')
     if not 365 <= len(dates) <= 367 or dates != sorted(set(dates)) or (dates[-1] - dates[0]).days + 1 != len(dates):
-        raise ValueError('Calendar dates are incomplete or unordered')
+        raise ValueError(f'Calendar dates are incomplete or unordered: {len(dates)} days, {dates[0]} to {dates[-1]}, {len(set(dates))} unique')
     for i, week in enumerate(weeks):
         week_dates = [dt.date.fromisoformat(day['date']) for day in week['contributionDays']]
         if any((date.weekday() + 1) % 7 != ((week_dates[0].weekday() + 1) % 7) + j for j, date in enumerate(week_dates)):
