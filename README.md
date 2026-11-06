@@ -22,7 +22,7 @@ Merged work in projects outside this account:
 
 ![Public GitHub contribution calendar. See the linked GitHub profile for the accessible activity record.](assets/contribution-graph.svg)
 
-The calendar is designed to refresh daily from GitHub's contribution data; the placeholder remains until its first successful refresh. [Explore the contribution record →](https://github.com/Sarbajit-Sengupta)
+Refreshed daily from GitHub's contribution data when the workflow succeeds. [Explore the contribution record →](https://github.com/Sarbajit-Sengupta)
 
 ## 04 / Currently exploring
 
