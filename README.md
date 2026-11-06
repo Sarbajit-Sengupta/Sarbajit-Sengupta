@@ -7,6 +7,9 @@ I'm Sarbajit, a computer science student exploring AI/ML, full-stack development
 **[TraceCache](https://github.com/Sarbajit-Sengupta/tracecache)** · `Python`  
 An offline cache-sizing library and CLI. A Fenwick-tree stack-distance profile produces an exact LRU miss curve; FIFO and Belady simulations provide points of comparison for equal-sized objects.
 
+**[CrowdMind](https://github.com/Sarbajit-Sengupta/crowdmind)** · `TypeScript`  
+A stadium-operations dashboard project exploring how match risk factors can be brought together in a command-center interface.
+
 ## 02 / Contributions, selected
 
 Merged work in projects outside this account:
@@ -19,7 +22,7 @@ Merged work in projects outside this account:
 
 ![Public GitHub contribution calendar. See the linked GitHub profile for the accessible activity record.](assets/contribution-graph.svg)
 
-The calendar is updated daily from GitHub's contribution data. [Explore the contribution record →](https://github.com/Sarbajit-Sengupta)
+The calendar is designed to refresh daily from GitHub's contribution data; the placeholder remains until its first successful refresh. [Explore the contribution record →](https://github.com/Sarbajit-Sengupta)
 
 ## 04 / Currently exploring
 
