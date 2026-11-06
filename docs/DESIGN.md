@@ -1,0 +1,12 @@
+# SOURCE / maintenance
+
+The banner and calendar are original SVGs, authored for this profile. They use system font fallbacks and no external images, fonts, libraries, or copied artwork. The opaque dark canvas remains legible on both GitHub themes. If SVG animation is disabled or unsupported, the cursor remains visible; reduced-motion disables its animation. The README's alt text remains meaningful if an image fails.
+
+`scripts/generate_activity.py` uses the GitHub GraphQL contribution calendar and only the Python standard library. It validates the response before atomically replacing the SVG. A failed request or invalid response fails the job and keeps the last valid asset. The initial asset is an explicit placeholder, not generated activity. It will be replaced after the first successful run on the default branch. GitHub's calendar represents contributions visible to the workflow token; verify the account's contribution privacy settings if visibility changes. The graph is a calendar of GitHub contribution levels, not a measure of quality or a complete history of all work.
+
+The workflow runs daily at 04:17 UTC and supports manual dispatch. The job needs `contents: write` solely to commit the generated asset; its repository-scoped `GITHUB_TOKEN` is supplied by Actions. Repository Actions settings or branch protection may prevent pushes. Check the Actions run after merging and use a protected-branch-compatible update process if needed. Workflow-generated commits do not count as contributions by the profile owner. Scheduled workflows may be delayed or disabled by GitHub.
+
+To update locally, set `GITHUB_TOKEN` to a token that can query GitHub's GraphQL API and run `python scripts/generate_activity.py`. Never commit the token. Review the result and commit only the asset. To change the featured projects or contributions, verify the repository or merged PR and update README.md directly. Preserve the `MERGED` label only for verified merged PRs.
+
+Third-party action: `actions/checkout` v4.2.2, pinned by commit, is MIT licensed: https://github.com/actions/checkout/blob/v4.2.2/LICENSE. GitHub's API supplies the calendar data; no other third-party visual component is bundled.
+
