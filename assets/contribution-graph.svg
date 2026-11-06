@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="200" viewBox="0 0 1200 200" role="img" aria-labelledby="title desc">
 <title id="title">Contribution calendar unavailable</title><desc id="desc">The first verified GitHub data refresh has not yet run. Visit the profile for current activity.</desc>
 <rect width="1200" height="200" fill="#0c131b"/><path d="M48 54H1152M48 150H1152" stroke="#35505c"/>
-<text x="48" y="37" fill="#82c9c4" font-family="monospace" font-size="13" letter-spacing="2">SOURCE / ACTIVITY</text>
-<text x="48" y="104" fill="#f1f2ed" font-family="sans-serif" font-size="20">Awaiting the first verified GitHub refresh.</text>
-<text x="48" y="177" fill="#9aafb7" font-family="monospace" font-size="12">NO ACTIVITY DATA IS IMPLIED BY THIS PLACEHOLDER</text>
+<text x="48" y="37" fill="#82c9c4" font-family="monospace" font-size="20" letter-spacing="2">SOURCE / ACTIVITY</text>
+<text x="48" y="108" fill="#f1f2ed" font-family="sans-serif" font-size="32">Awaiting the first verified GitHub refresh.</text>
+<text x="48" y="177" fill="#9aafb7" font-family="monospace" font-size="18">NO ACTIVITY DATA IS IMPLIED BY THIS PLACEHOLDER</text>
 </svg>
 
