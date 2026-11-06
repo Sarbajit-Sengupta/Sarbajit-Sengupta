@@ -37,8 +37,16 @@ def render(payload):
             dates.append(date)
             row = (date.weekday() + 1) % 7
             cells.append(f'<rect x="{48 + col * 20}" y="{83 + row * 20}" width="14" height="14" rx="2" fill="{COLORS[level]}"><title>{date.isoformat()}: {count} contributions</title></rect>')
-    if dates != sorted(set(dates)) or (dates[-1] - dates[0]).days + 1 != len(dates):
+    if not 365 <= len(dates) <= 367 or dates != sorted(set(dates)) or (dates[-1] - dates[0]).days + 1 != len(dates):
         raise ValueError('Calendar dates are incomplete or unordered')
+    for i, week in enumerate(weeks):
+        week_dates = [dt.date.fromisoformat(day['date']) for day in week['contributionDays']]
+        if any((date.weekday() + 1) % 7 != ((week_dates[0].weekday() + 1) % 7) + j for j, date in enumerate(week_dates)):
+            raise ValueError('Days cross a week boundary')
+        if i and week_dates[0].weekday() != 6:
+            raise ValueError('A noninitial week does not start on Sunday')
+        if i < len(weeks) - 1 and week_dates[-1].weekday() != 5:
+            raise ValueError('A nonfinal week does not end on Saturday')
     if abs((dt.datetime.now(dt.timezone.utc).date() - dates[-1]).days) > 2:
         raise ValueError('Calendar is stale or future-dated')
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
