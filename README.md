@@ -18,7 +18,7 @@ Merged work in projects outside this account:
 - **[CAREERFORGE #256](https://github.com/Pratyush-Panda-2006/CAREERFORGE/pull/256)** — An interactive, responsive order-book depth chart using simulated data. `MERGED`
 - **[CAREERFORGE #257](https://github.com/Pratyush-Panda-2006/CAREERFORGE/pull/257)** — Accessible terminal command shortcuts that share the existing command path. `MERGED`
 
-
+## 03 / Activity
 <picture>
   <source
     media="(prefers-color-scheme: dark)"
