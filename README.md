@@ -18,11 +18,23 @@ Merged work in projects outside this account:
 - **[CAREERFORGE #256](https://github.com/Pratyush-Panda-2006/CAREERFORGE/pull/256)** — An interactive, responsive order-book depth chart using simulated data. `MERGED`
 - **[CAREERFORGE #257](https://github.com/Pratyush-Panda-2006/CAREERFORGE/pull/257)** — Accessible terminal command shortcuts that share the existing command path. `MERGED`
 
-## 03 / Activity
 
-![Public GitHub contribution calendar. See the linked GitHub profile for the accessible activity record.](assets/contribution-graph.svg)
+<picture>
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="https://raw.githubusercontent.com/Sarbajit-Sengupta/Sarbajit-Sengupta/output/github-snake.svg"
+  />
+  <source
+    media="(prefers-color-scheme: light)"
+    srcset="https://raw.githubusercontent.com/Sarbajit-Sengupta/Sarbajit-Sengupta/output/github-snake-light.svg"
+  />
+  <img
+    alt="Animated GitHub contribution snake"
+    src="https://raw.githubusercontent.com/Sarbajit-Sengupta/Sarbajit-Sengupta/output/github-snake.svg"
+    width="100%"
+  />
+</picture>
 
-Refreshed daily from GitHub's contribution data when the workflow succeeds. [Explore the contribution record →](https://github.com/Sarbajit-Sengupta)
 
 ## 04 / Currently exploring
 
